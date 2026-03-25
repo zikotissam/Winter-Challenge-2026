@@ -89,6 +89,7 @@ I built Tkinter-based GUIs for both match testing and training management. The a
 - **Server timeouts**: The CG game server gave me timeouts that never happened locally. The bot was tuned to use 45ms per turn — well within limits — but server load caused sporadic timeouts that cost games. Finishing 3rd with avoidable timeouts is frustrating. The bot was stronger than its final rank.
 - **Depth tuning rabbit hole**: I spent time testing deep search (depth 14+), but extensive tuning confirmed that **depth 10-11 is the sweet spot**. Going deeper sounds better in theory, but the simulation is expensive due to gravity cascades, and good priors with shallow search consistently beat deep search with noisy rollouts.
 
+
 ## Key Takeaway
 
 The meta-lesson from this contest isn't about algorithms. The bot uses a well-known technique (MCTS/DUCT), and the evaluation function is straightforward. What got me to 3rd place was **the speed at which I could iterate**: build the simulation, test it, tune parameters, fix issues, and repeat — faster than ever before.
